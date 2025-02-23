@@ -1,23 +1,40 @@
-import { useAuth } from '@clerk/clerk-react'
 import './dashboardPage.css'
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+
 
 const DashboardPage = () => {
-  const {userId, isLoaded} = useAuth();
-
-  const navigate = useNavigate();
-
-  useEffect(()=>{
-    if(isLoaded && !userId){
-      navigate("/sign-in");
-    }
-  },[isLoaded, userId, navigate])
-
-  if(!isLoaded) return "Loading...";
+  
 
   return (
-    <div>DashboardPage</div>
+    <div className='dashboardPage'>
+      <div className="texts">
+        <div className="logo">
+          <img src="/logo.png" alt="" />
+          <h1>Pyros AI</h1>
+        </div>
+        <div className="options">
+          <div className="option">
+            <img src="/chat.png" alt="" />
+            <span>Create a New Chat</span>
+          </div>
+          <div className="option">
+            <img src="/image.png" alt="" />
+            <span>Analyze Images</span>
+          </div>
+          <div className="option">
+            <img src="/code.png" alt="" />
+            <span>Code with me...</span>
+          </div>
+        </div>
+      </div>
+      <div className="formContainer">
+        <form>
+          <input type="text" placeholder='Ask me anything...' />
+          <button>
+            <img src="/arrow.png" alt="" />
+          </button>
+        </form>
+      </div>
+    </div>
   )
 }
 
