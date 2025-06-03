@@ -33,6 +33,7 @@ const NewPrompt = ({data}) => {
   const endRef = useRef(null);
   const formRef = useRef(null);
 
+
   useEffect(()=>{
     endRef.current.scrollIntoView({behavior:"smooth"})
 
@@ -130,6 +131,7 @@ const NewPrompt = ({data}) => {
         path={img.dbData?.filePath}
         width="380"
         transformation={({ width: 380})}
+        style={{marginLeft:"auto"}}
       />
     )}
     {question && <div className='message user'>{question}</div>}

@@ -27,19 +27,19 @@ const Homepage = () => {
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                'Jack: We produce food for Mice', 
+                'Jack: Where is Pisa?', 
                 2000, ()=>{
                   setTypingStatus("bot")
                 }, // wait 1s before replacing "Mice" with "Hamsters"
-                'Bot: We produce food for Hamsters',
+                'Bot: Pisa is in Italy.',
                 2000, ()=>{
                   setTypingStatus("human2")
                 },
-                'Emma: We produce food for Guinea Pigs',
+                'Emma: Love you AI',
                 2000, ()=>{
                   setTypingStatus("bot")
                 },
-                'Bot: We produce food for Chinchillas',
+                'Bot: Haha.',
                 2000, ()=>{
                   setTypingStatus("human1")
                 },

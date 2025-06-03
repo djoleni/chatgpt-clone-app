@@ -41,6 +41,7 @@ const ChatPage = () => {
                 transformation={[{height:300, width:400}]}
                 loading="lazy"
                 lqip={{active:true, quality:20}}
+                style={{marginLeft:"auto"}}
               
               />
             )}
